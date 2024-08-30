@@ -3,6 +3,8 @@ from .models import Curso
 from django.views.decorators.csrf import csrf_exempt
 import json
 
+""" Usando Django puro, de manera clasica """
+
 def index(request):
     context = {
         "status": True,
@@ -47,7 +49,7 @@ def post_curso(request):
 
     return JsonResponse(context)
 
-""" Uso de Rest Framework """
+""" Usando Django Rest Framework """
 from rest_framework import generics
 from rest_framework import serializers
 
